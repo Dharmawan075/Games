@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/maxNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Max Number: 0"
+            android:layout_gravity="left"/>
+
+        <LinearLayout
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn20"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:text="20"
+                android:background="@drawable/btn_background"/>
+
+            <Button
+                android:id="@+id/btn50"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:text="50"
+                android:background="@drawable/btn_background"/>
+
+            <Button
+                android:id="@+id/btn100"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:text="100"
+                android:background="@drawable/btn_background"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/outcomeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="What's The Number? Guess It!"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginHorizontal="50dp"
+            android:padding="10dp"
+            android:layout_marginTop="75dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="75dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:inputType="number"
+                android:layout_marginRight="20dp"
+                android:id="@+id/userEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/text_background"
+                android:gravity="center"
+                android:hint="Input Here"
+                android:padding="10dp"
+                android:textSize="20sp"/>
+
+            <Button
+                android:onClick="checkGuess"
+                android:id="@+id/btnGuess"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_background"
+                android:textColor="@color/white"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:text="Guess"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="75dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/thirdActRetryBtn"
+                android:onClick="refreshActivity"
+                android:background="@drawable/btn_background"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:padding="10dp"
+                android:visibility="invisible"
+                android:text="Play Again"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
